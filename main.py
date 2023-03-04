@@ -13,9 +13,9 @@ def main():
     response = Request.get(advt_url)
     find_img = RegParser.find_img(response.data)
     path = RegParser.get_pretty_path(advt_url)
-    
+
     if not find_img:
-        print('Not found img');
+        print('Not found img'); exit()
 
     # crate dis dir
     mkdir(path)
